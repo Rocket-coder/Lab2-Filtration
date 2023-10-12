@@ -20,11 +20,11 @@ L9=[[1, 1, 1];...
 
 G5 =convolution2(A,L9);
 ShowImage(G5,'Laplacian in pseudocolors'); pause
-G5N=normalize(G5);
+G5N=normalize2(G5);
 %ShowImage(G5N,'Normalized abs(L5) in pseudocolors'); pause
 Show2ImagesPCBW(G5N,G5N,'Normalized L','BW'); pause
 
-G5N=normalize(abs(G5));
+G5N=normalize2(abs(G5));
 %ShowImage(abs(G5),'abs(L5) in pseudocolors'); pause
 Show2ImagesPCBW(G5N,255-G5N,'Normalized |L|','neganive BW'); %pause
 

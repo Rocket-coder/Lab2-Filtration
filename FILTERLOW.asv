@@ -34,10 +34,11 @@ G16=convolution2(C,W16);
 G16N = normalize(G16);
 Show2ImagesBW(C8,G16N,'Original','W16-filtered'); pause
 G44=uint8(SpatialFilter(C,W44));
+G44N = normalize(G44)
 Show2ImagesBW(C8,G44,'Original','W44-filtered'); %pause
 %
- Show2ImagesBW(G5N,G9N, 'W5-filtered','W9-filtered');  pause
- Show2ImagesBW(G5N,G16N,'W5-filtered','W16-filtered'); pause
- Show2ImagesBW(G9N,G16N,'G9-filtered','W16-filtered'); 
+% Show2ImagesBW(G5,G9, 'W5-filtered','W9-filtered');  pause
+% Show2ImagesBW(G5,G16,'W5-filtered','W16-filtered'); pause
+% Show2ImagesBW(G9,G16,'G9-filtered','W16-filtered'); 
 
             

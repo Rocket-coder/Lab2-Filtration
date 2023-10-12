@@ -13,6 +13,6 @@ subplot(1,1,1),imshow(IS,jet(sn)),...
     set(gca,'TickDir','out'), 
     set(gca,'XColor','k','YColor','k','fontsize',11,'fontweight','b')
     setcolourbar(l,h);
-    %colorbar
+    colorbar
 end
 

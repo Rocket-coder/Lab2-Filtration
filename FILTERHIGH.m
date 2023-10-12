@@ -1,5 +1,6 @@
 %FILTERHIGH;
-A8=imread('Fig0316(a)(moon).tif');
+Name='My Rocket.jpg';
+A8=imread(Name);
 %A8=imread('Fig0203(a)(chest-xray).tif');
 %A8=imread('Fig1006(a)(building).tif');
 %A8=imread('Fig0306(a)(bone-scan-GE).tif');
