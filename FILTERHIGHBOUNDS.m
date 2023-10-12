@@ -1,0 +1,36 @@
+%FILTERHIGHBOUNDS;
+A8=imread('Fig0316(a)(moon).tif');
+%A8=imread('Fig0203(a)(chest-xray).tif');
+%A8=imread('Fig1006(a)(building).tif');
+%A8=imread('Fig0306(a)(bone-scan-GE).tif');
+%A8=imread('Fig0413(a)(original_test_pattern).tif');
+%A8=imread('town1.jpg');
+%A8=imread('garden1.jpg');
+%ShowImageRGB(imread('garden-RGB.jpg'),'garden1.jpg');pause
+%--------------------------------------------------------------------
+A=double(A8);
+%
+L5=[[0, 1,0];...
+    [1,-4,1];...
+    [0, 1,0]];
+
+L9=[[1, 1, 1];...
+    [1,-8, 1];...
+    [1, 1, 1]];
+
+G5 =convolution2(A,L9);
+ShowImage(G5,'Laplacian in pseudocolors'); pause
+G5N=normalize(G5);
+%ShowImage(G5N,'Normalized abs(L5) in pseudocolors'); pause
+Show2ImagesPCBW(G5N,G5N,'Normalized L','BW'); pause
+
+G5N=normalize(abs(G5));
+%ShowImage(abs(G5),'abs(L5) in pseudocolors'); pause
+Show2ImagesPCBW(G5N,255-G5N,'Normalized |L|','neganive BW'); %pause
+
+
+
+
+
+
+            
