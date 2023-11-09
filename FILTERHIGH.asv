@@ -24,15 +24,13 @@ G5N=normalize(G5);
 Show2ImagesBW(A8,G5N,'Original','5-Laplacian'); pause
 AF5=normalize(abs(A-G5));
 Show2ImagesBW(A8,AF5,'Original','L5-filtered'); pause
-imwrite(G5N,'Rocket_5-lap.jpg');
-imwrite(AF5,'Rocket_5-lap_filtered.jpg');
+
 G9 =convolution2(A,L9);
 G9N=normalize(G9);
 Show2ImagesBW(A8,G9N,'Original','9-Laplacian'); pause
 AF9=normalize(abs(A-G9));
 Show2ImagesBW(A8,AF9,'Original','L9-filtered'); pause
-imwrite(G9N,'Rocket_9-lap.jpg');
-imwrite(AF9,'Rocket_9-lap_filtered.jpg');
+%
 Show2ImagesBW(AF5,AF9, 'L5-filtered','L9-filtered');  %pause
 
 

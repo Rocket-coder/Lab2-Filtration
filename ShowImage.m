@@ -8,11 +8,12 @@ fs='\fontsize{20}\bf\color{red}';
 IS=grayslice(mat2gray(double(A),[l,h]),sn);
 subplot(1,1,1),imshow(IS,jet(sn)),...
     title([fs,T])
-    colormap(jet(sn))
+    % colormap(jet(sn))
+    colormap(hot(sn))
     set(gcf,'Color','w')
     set(gca,'TickDir','out'), 
     set(gca,'XColor','k','YColor','k','fontsize',11,'fontweight','b')
-    setcolourbar(l,h);
+    % setcolourbar(l,h);
     colorbar
 end
 

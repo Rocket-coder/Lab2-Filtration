@@ -9,9 +9,10 @@ fs='\fontsize{16}\bf\color{red}';
 %fs='\fontsize{32}\bf\color{black}';
 %---- In pseudocolours ---------------------------------------------
 IS=grayslice(mat2gray(double(A),[la,ha]),sn);
-subplot(1,2,1),subimage(IS,jet(sn)),...
+subplot(1,2,1),subimage(IS,hot(sn)),...
 title([fs,T1])
-    colormap(jet(sn))
+    % colormap(jet(sn))
+    colormap(hot(sn))
     set(gcf,'Color','w')
     set(gca,'TickDir','out'), 
     set(gca,'XColor','k','YColor','k','fontsize',12,'fontweight','b')

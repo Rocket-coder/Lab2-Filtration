@@ -24,16 +24,13 @@ S =abs(convolution2(A,SX))+abs(convolution2(A,SY));
 SN=normalize(S);
 Show2ImagesBW(A8,SN,'Original','Sobel mask'); pause
 AS1=normalize(A+0.7*S);
-imwrite(SN, 'Rocket_sob1_mask.jpg');
-imwrite(AS1, 'Rocket_sob1_filtered.jpg');
+imwrite(SN)
 Show2ImagesBW(A8,AS1,'Original','Sobel1 filtered'); pause
 %
 S =abs(convolution2(A,SX2))+abs(convolution2(A,SY2));
 SN=normalize(S);
 Show2ImagesBW(A8,SN,'Original','Sobel mask2'); pause
 AS2=normalize(A+0.2*S);
-imwrite(SN, 'Rocket_sob2_mask.jpg');
-imwrite(AS2, 'Rocket_sob2_filtered.jpg');
 Show2ImagesBW(A8,AS2,'Original','Sobel2 filtered'); pause
 %
 Show2ImagesBW(AS1, AS2,'Sobel1 filtered','Sobel2 filtered'); 
